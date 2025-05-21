@@ -20,14 +20,19 @@ public class Main {
 //        }
 //        ExeptionDemo.CustomException();
 //        ExeptionDemo.ChainingException();
-        var list = new GenericList<Integer>();
-        list.add(1);
-        int number = list.get(0);
+
+        // use GenericClas for Integer
+//        var list = new GenericList<Integer>();
+//        list.add(1);
+//        int number = list.get(0);
 
         var user = new GenericList<User>();
         user.add(new User());
         User indexuser = user.get(0);
 
+        //Constrains, that we can extract to generic type
+        // can be object, or interface with subclasses
+        var Constraints = new GenericList<User>();
 
 
     }
