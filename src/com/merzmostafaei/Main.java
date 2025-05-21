@@ -11,10 +11,11 @@ public class Main {
 //        ExeptionDemo.show();
 //        ExeptionDemo.catchException();
 //        ExeptionDemo.TryResource();
-        try {
-            ExeptionDemo.ThrowingExceptions();
-        } catch (Throwable e) {
-            System.out.println("An unexpected error occurred");
-        }
+//        try {
+//            ExeptionDemo.ThrowingExceptions();
+//        } catch (Throwable e) {
+//            System.out.println("An unexpected error occurred");
+//        }
+        ExeptionDemo.CustomException();
     }
 }

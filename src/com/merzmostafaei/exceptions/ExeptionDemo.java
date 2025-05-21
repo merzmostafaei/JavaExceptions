@@ -79,6 +79,15 @@ public class ExeptionDemo {
         }
     }
 
+    public static void CustomException(){
+        var account1 = new Account();
+        try {
+            account1.withdraw(10);
+        } catch (InsufficientFundsException e) {
+            System.out.println(e.getMessage());;
+        }
+    }
+
 
     }
 
