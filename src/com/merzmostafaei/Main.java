@@ -1,6 +1,8 @@
 package com.merzmostafaei;
 
 import com.merzmostafaei.exceptions.ExeptionDemo;
+import com.merzmostafaei.generics.GenericList;
+import com.merzmostafaei.generics.User;
 
 import java.io.IOException;
 
@@ -17,6 +19,16 @@ public class Main {
 //            System.out.println("An unexpected error occurred");
 //        }
 //        ExeptionDemo.CustomException();
-        ExeptionDemo.ChainingException();
+//        ExeptionDemo.ChainingException();
+        var list = new GenericList<Integer>();
+        list.add(1);
+        int number = list.get(0);
+
+        var user = new GenericList<User>();
+        user.add(new User());
+        User indexuser = user.get(0);
+
+
+
     }
 }
