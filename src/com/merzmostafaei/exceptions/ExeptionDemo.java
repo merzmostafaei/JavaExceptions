@@ -79,12 +79,24 @@ public class ExeptionDemo {
         }
     }
 
-    public static void CustomException(){
+//    public static void CustomException(){
+//        var account1 = new Account();
+//        try {
+//            account1.withdraw(10);
+//        } catch (InsufficientFundsException e) {
+//            System.out.println(e.getMessage());;
+//        }
+//    }
+    public static void ChainingException(){
         var account1 = new Account();
         try {
             account1.withdraw(10);
-        } catch (InsufficientFundsException e) {
-            System.out.println(e.getMessage());;
+        } catch (AccountException e) {
+//            e.printStackTrace(); --if you want to make library or for other programmer
+            // -- for user freindly make this is less noisy.
+           var cause = e.getCause();
+            System.out.println(cause.getMessage());
+
         }
     }
 

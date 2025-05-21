@@ -16,6 +16,7 @@ public class Main {
 //        } catch (Throwable e) {
 //            System.out.println("An unexpected error occurred");
 //        }
-        ExeptionDemo.CustomException();
+//        ExeptionDemo.CustomException();
+        ExeptionDemo.ChainingException();
     }
 }

@@ -9,10 +9,25 @@ public class Account {
             throw new IOException();
     }
     //Custom Exception
+//    private float balance;
+//    public void withdraw(float value) throws InsufficientFundsException {
+//
+//        if (value > balance )
+//            throw new InsufficientFundsException();
+//    }
+    //Chaining Exception
     private float balance;
-    public void withdraw(float value) throws InsufficientFundsException {
+    public void withdraw(float value) throws  AccountException {
 
-        if (value > balance )
-            throw new InsufficientFundsException();
+        if (value > balance ){
+//            var fundsException = new InsufficientFundsException();
+//            --when we use the cause throw abale object in Account Exception we dont need to create this object again
+//            var accountException = new AccountException();
+//            accountException.initCause(fundsException);
+//            --we use it in AccountException class.
+//            throw accountException;
+            throw new AccountException(new InsufficientFundsException());
+        }
+
     }
 }
