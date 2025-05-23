@@ -54,6 +54,21 @@ public class Main {
         var keyvaluepair = new KeyValuePair<>();
 
 
+        // -- because Instructor is the child of Usercomparable
+        UserComparable user = new Instructor(10);
+        Utils.printUser(new Instructor(20));
+
+        // -- for list of users
+        var instructors = new GenericList<Instructor>();
+        // ! Generic child is not subclass of Generic the Parents
+        var users = new GenericList<UserComparable>();
+        Utils.printUsers(users);
+        Utils.printUser(new Instructor(20));
+        Utils.printUsers(new GenericList<UserComparable>());
+
+
 
     }
+
+
 }

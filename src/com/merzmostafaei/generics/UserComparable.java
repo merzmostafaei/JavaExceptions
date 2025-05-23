@@ -1,6 +1,6 @@
 package com.merzmostafaei.generics;
 
-public class UserComparable implements Comparable<UserComparable> {
+public class UserComparable implements Comparable<UserComparable>, Cloneable {
     public int points;
 
     public UserComparable(int points) {
