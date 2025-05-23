@@ -1,10 +1,7 @@
 package com.merzmostafaei;
 
 import com.merzmostafaei.exceptions.ExeptionDemo;
-import com.merzmostafaei.generics.GenericList;
-import com.merzmostafaei.generics.User;
-import com.merzmostafaei.generics.UserComparable;
-import com.merzmostafaei.generics.Utils;
+import com.merzmostafaei.generics.*;
 
 import java.io.IOException;
 
@@ -46,10 +43,15 @@ public class Main {
         else System.out.println("user1 > user2");
 
 
-        // Generic Method
+        // --Generic Method
         var max = Utils.max(new UserComparable(10), new UserComparable(20));
-        // ovveride tostring in usercomparbleclass
+        // --ovveride tostring in usercomparbleclass
         System.out.println(max);
+
+        //-- multiparameter
+        Utils.print(1, "merz");
+        Utils.print(new User(), "merz");
+        var keyvaluepair = new KeyValuePair<>();
 
 
 
