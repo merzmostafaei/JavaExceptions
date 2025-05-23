@@ -4,6 +4,7 @@ import com.merzmostafaei.exceptions.ExeptionDemo;
 import com.merzmostafaei.generics.GenericList;
 import com.merzmostafaei.generics.User;
 import com.merzmostafaei.generics.UserComparable;
+import com.merzmostafaei.generics.Utils;
 
 import java.io.IOException;
 
@@ -44,6 +45,11 @@ public class Main {
             System.out.println("user1 == user2");
         else System.out.println("user1 > user2");
 
+
+        // Generic Method
+        var max = Utils.max(new UserComparable(10), new UserComparable(20));
+        // ovveride tostring in usercomparbleclass
+        System.out.println(max);
 
 
 
