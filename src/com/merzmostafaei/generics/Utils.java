@@ -20,7 +20,6 @@ public class Utils {
     }
     // super for user parent --- > add
     public static void printUsersAdd(GenericList<? super UserComparable> users){
-        GenericList<Object> y = new GenericList<>();
         users.add(new Instructor(1));
         users.add(new UserComparable(20));
     }
