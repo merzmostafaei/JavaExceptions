@@ -1,5 +1,6 @@
 package com.merzmostafaei;
 
+import com.merzmostafaei.collections.CollectionsDemo;
 import com.merzmostafaei.exceptions.ExeptionDemo;
 import com.merzmostafaei.generics.*;
 
@@ -81,9 +82,13 @@ public class Main {
         list.add("B");
         for (var item : list)
             System.out.println(item);
-        // for here use iterator when we applay implements Iterable<T> in our class
-        // if we delete this part foreach not applicable to type of our class.
+        //-- for here use iterator when we applay implements Iterable<T> in our class
+        //-- if we delete this part foreach not applicable to type of our class.
 
+        //-----------------------
+        // -- Collections
+
+        CollectionsDemo.show();
 
     }
 
