@@ -1,6 +1,7 @@
 package com.merzmostafaei;
 
 import com.merzmostafaei.collections.CollectionsDemo;
+import com.merzmostafaei.collections.ListDemo;
 import com.merzmostafaei.exceptions.ExeptionDemo;
 import com.merzmostafaei.generics.*;
 
@@ -90,6 +91,9 @@ public class Main {
 
         CollectionsDemo.show();
 
+        //-- List
+
+        ListDemo.show();
     }
 
 

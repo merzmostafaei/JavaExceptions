@@ -47,5 +47,7 @@ public class CollectionsDemo {
         System.out.println(collection.equals(other));
 
 
+
+
     }
 }
