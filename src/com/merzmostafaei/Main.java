@@ -59,13 +59,30 @@ public class Main {
         Utils.printUser(new Instructor(20));
 
         // -- for list of users
-        var instructors = new GenericList<Instructor>();
+//        var instructors = new GenericList<Instructor>();
         // ! Generic child is not subclass of Generic the Parents
-        var users = new GenericList<UserComparable>();
-        Utils.printUsers(users);
-        Utils.printUser(new Instructor(20));
-        Utils.printUsers(new GenericList<UserComparable>());
+//        var users = new GenericList<UserComparable>();
+//        Utils.printUsers(users);
+//        Utils.printUser(new Instructor(20));
+//        Utils.printUsers(new GenericList<UserComparable>());
 
+
+        // ---Iterable Interface
+        // insest of for and change the private implimentation to public we use itable
+
+        var list = new com.merzmostafaei.collections.GenericList<String>();
+//        var iterator = list.iterator();
+//        while (iterator.hasNext()){
+//            var current = iterator.next();
+//            System.out.println(current);
+//        }
+        // -- see the ByteCode representation
+        list.add("a");
+        list.add("B");
+        for (var item : list)
+            System.out.println(item);
+        // for here use iterator when we applay implements Iterable<T> in our class
+        // if we delete this part foreach not applicable to type of our class.
 
 
     }
