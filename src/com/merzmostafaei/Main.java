@@ -1,11 +1,17 @@
 package com.merzmostafaei;
 
 import com.merzmostafaei.collections.CollectionsDemo;
+import com.merzmostafaei.collections.Customer;
+import com.merzmostafaei.collections.EmailComparator;
 import com.merzmostafaei.collections.ListDemo;
 import com.merzmostafaei.exceptions.ExeptionDemo;
 import com.merzmostafaei.generics.*;
 
+
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -94,6 +100,28 @@ public class Main {
         //-- List
 
         ListDemo.show();
+
+       //-- Comparable Interface
+
+
+         List<Customer> customers = new ArrayList<>();
+         customers.add(new Customer("Camparable B","e3"));
+         customers.add(new Customer("Camparable A","e2"));
+         customers.add(new Customer("Camparable C","e1"));
+         //-- Sorting List
+        System.out.println("customers in comparable interface");
+        //sort by name, use first sort<List<T>>
+        Collections.sort(customers);
+        System.out.println("  //sort by name, use first sort<List<T>>");
+        System.out.println(customers);
+
+        //sort by email, use second sort<list<T>,Comparator>
+        Collections.sort(customers, new EmailComparator());
+
+        System.out.println("//sort by email, use second sort<list<T>,Comparator>");
+        System.out.println(customers);
+
+
     }
 
 
