@@ -3,6 +3,7 @@ package com.merzmostafaei;
 import com.merzmostafaei.collections.*;
 import com.merzmostafaei.exceptions.ExeptionDemo;
 import com.merzmostafaei.generics.*;
+import com.merzmostafaei.lambdas.LambdasDemo;
 
 
 import java.io.IOException;
@@ -130,6 +131,10 @@ public class Main {
         // ! Hashmap is not Collection and Iterable
 
         MapDemo.show();
+
+
+        //--Lambdas
+        LambdasDemo.show();
 
     }
 
