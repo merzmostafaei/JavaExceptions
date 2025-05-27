@@ -28,9 +28,16 @@ public class SetDemo {
         Set<String> setlist2 =
                 new HashSet<>(Arrays.asList("b","c","d"));
 
+
+
         // Intersection
         System.out.println("Intersection -> common both sets");
         setlist1.retainAll(setlist2);
+        System.out.println(setlist1);
+
+        // Diffrence
+        System.out.println("Diffrence ");
+        setlist1.removeAll(setlist2);
         System.out.println(setlist1);
 
         // Union
