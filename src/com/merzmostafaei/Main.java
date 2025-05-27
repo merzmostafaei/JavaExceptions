@@ -1,9 +1,6 @@
 package com.merzmostafaei;
 
-import com.merzmostafaei.collections.CollectionsDemo;
-import com.merzmostafaei.collections.Customer;
-import com.merzmostafaei.collections.EmailComparator;
-import com.merzmostafaei.collections.ListDemo;
+import com.merzmostafaei.collections.*;
 import com.merzmostafaei.exceptions.ExeptionDemo;
 import com.merzmostafaei.generics.*;
 
@@ -121,6 +118,10 @@ public class Main {
         System.out.println("//sort by email, use second sort<list<T>,Comparator>");
         System.out.println(customers);
 
+
+        // Queue Interface
+
+        QueueDemo.show();
 
     }
 
