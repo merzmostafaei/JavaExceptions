@@ -126,6 +126,11 @@ public class Main {
         //-- Set Interface
         SetDemo.show();
 
+        //-- Hashmap
+        // ! Hashmap is not Collection and Iterable
+
+        MapDemo.show();
+
     }
 
 
