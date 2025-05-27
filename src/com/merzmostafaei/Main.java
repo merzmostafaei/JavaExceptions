@@ -123,6 +123,9 @@ public class Main {
 
         QueueDemo.show();
 
+        //-- Set Interface
+        SetDemo.show();
+
     }
 
 

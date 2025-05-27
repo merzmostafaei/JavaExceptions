@@ -44,5 +44,7 @@ public class QueueDemo {
         var front3 = queue.peek();
         System.out.println(front3);
 
+
+
     }
 }
