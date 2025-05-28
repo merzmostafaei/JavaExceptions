@@ -35,10 +35,13 @@ public class LambdasDemo {
         //Class(Object::method)
         greet(System.out::println);
 
-        //-- Using method Consumer
+        //-- Using Consumer interface
         List<Integer> list = List.of(1,2,3);
         //foreach use consumer so we pass the lambrda
         list.forEach(item -> System.out.println(item));
+
+        // i
+
     }
     public static void ChainingConsumer(){
         List<String> list = List.of("a","b","c");
