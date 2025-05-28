@@ -1,10 +1,7 @@
 package com.merzmostafaei.lambdas;
 
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class LambdasDemo {
     // Variable Capture
@@ -133,6 +130,17 @@ public class LambdasDemo {
 
 
 
+    }
+
+    //Binary Operation Interface
+    public static void BinaryOperation(){
+        System.out.println("BinaryOperatio");
+        // a, b -> a+b -> squre
+        BinaryOperator<Integer> add = (a, b) -> a + b;
+        Function<Integer,Integer> squre = a-> a*a;
+
+        var result = add.andThen(squre).apply(1,2);
+        System.out.println(result);
     }
 
 }

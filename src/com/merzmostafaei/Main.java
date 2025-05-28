@@ -146,6 +146,9 @@ public class Main {
         //Combining Predicate Interface
         LambdasDemo.combiningPredicate();
 
+        //BinaryOperator
+        LambdasDemo.BinaryOperation();
+
     }
 
 
