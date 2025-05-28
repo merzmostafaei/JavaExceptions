@@ -1,7 +1,11 @@
 package com.merzmostafaei.lambdas;
 
 public class LambdasDemo {
-    public static void show(){
+    // Variable Capture
+    public static String prefix = "-";
+    public static void show() {
+
+
 //        if you use this you must create class
         //        greet(new ConsolePrinter());
 
@@ -17,10 +21,17 @@ public class LambdasDemo {
 
         //-- using Lambda exprecion
         // 1- greet((String message) -> System.out.println(message));
-        greet(message -> System.out.println(message));
+         greet(message -> System.out.println(message));
 
-    }   // lambda exprecion is esssensianly is object, you can do this like..
-        Printer printer = message -> System.out.println(message);
+        // lambda exprecion is esssensianly is object, you can do this like..
+        Printer printer = message -> System.out.println(prefix + message);
+
+
+        //-- method Refrance
+
+        //Class(Object::method)
+        greet(System.out::println);
+    }
 
     public static void greet(Printer printer){
         printer.print("Hello World from greet method");
