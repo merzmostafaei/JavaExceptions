@@ -110,5 +110,29 @@ public class LambdasDemo {
 
     }
 
+    public static void combiningPredicate(){
+        System.out.println("CombiningPredicate");
+        Predicate<String> hasLefrBrace = str -> str.startsWith("{");
+        Predicate<String> hasRightBrace = str -> str.endsWith("}");
+
+        // && || !
+        Predicate<String> hasLeftAndRight = hasLefrBrace.and(hasRightBrace);
+        Predicate<String> hasLeftOrRight = hasLefrBrace.or(hasRightBrace);
+        Predicate<String> hasNotLeftAndRight = hasLefrBrace.negate();
+
+        var resulthasLeftAndRight= hasLeftAndRight.test("{key:value}");
+        System.out.println("resulthasLeftAndRight");
+        System.out.println(resulthasLeftAndRight);
+        var resulthasLeftOrRight= hasLeftOrRight.test("{key:value}");
+        System.out.println("resulthasLeftOrRight");
+        System.out.println(resulthasLeftOrRight);
+        var resulthasNotLeftAndRight= hasNotLeftAndRight.test("{key:value}");
+        System.out.println("resulthasNotLeftAndRight");
+        System.out.println(resulthasNotLeftAndRight);
+
+
+
+
+    }
 
 }

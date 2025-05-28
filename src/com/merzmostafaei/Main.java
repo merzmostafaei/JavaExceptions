@@ -143,6 +143,9 @@ public class Main {
         //--FunctionInterfaces
         LambdasDemo.FunctionInterFaces();
 
+        //Combining Predicate Interface
+        LambdasDemo.combiningPredicate();
+
     }
 
 
