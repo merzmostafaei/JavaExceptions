@@ -1,5 +1,7 @@
 package com.merzmostafaei.lambdas;
 
+import java.util.List;
+
 public class LambdasDemo {
     // Variable Capture
     public static String prefix = "-";
@@ -31,7 +33,15 @@ public class LambdasDemo {
 
         //Class(Object::method)
         greet(System.out::println);
+
+        //-- Using method Consumer
+        List<Integer> list = List.of(1,2,3);
+        //foreach use consumer so we pass the lambrda
+        list.forEach(item -> System.out.println(item));
     }
+
+
+
 
     public static void greet(Printer printer){
         printer.print("Hello World from greet method");
