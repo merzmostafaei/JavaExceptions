@@ -149,6 +149,9 @@ public class Main {
         //BinaryOperator
         LambdasDemo.BinaryOperation();
 
+        //UnaryOperator
+        LambdasDemo.UnaryOperator();
+
     }
 
 

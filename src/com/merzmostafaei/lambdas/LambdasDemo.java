@@ -143,4 +143,14 @@ public class LambdasDemo {
         System.out.println(result);
     }
 
+    public static void UnaryOperator(){
+        System.out.println("UnaryOperator");
+
+        UnaryOperator<Integer> square = n-> n*n;
+        UnaryOperator<Integer> increment = n-> n+1;
+
+        var result = increment.andThen(square).apply(1);
+        System.out.println(result);
+    }
+
 }
