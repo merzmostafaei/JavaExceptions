@@ -2,6 +2,7 @@ package com.merzmostafaei.lambdas;
 
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public class LambdasDemo {
     // Variable Capture
@@ -36,11 +37,16 @@ public class LambdasDemo {
         greet(System.out::println);
 
         //-- Using Consumer interface
+        System.out.println("Using Consumer interface");
         List<Integer> list = List.of(1,2,3);
         //foreach use consumer so we pass the lambrda
         list.forEach(item -> System.out.println(item));
 
-        // i
+        //-- Using Supplayer Interface
+        System.out.println("Using Supplayer Interface");
+        Supplier<Double> getRandom = () -> Math.random();
+        var random = getRandom.get();
+        System.out.println(random);
 
     }
     public static void ChainingConsumer(){
