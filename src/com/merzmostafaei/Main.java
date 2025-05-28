@@ -136,8 +136,12 @@ public class Main {
         //--Lambdas
         LambdasDemo.show();
 
-        //Chaning consumer
+        //--Chaning consumer
         LambdasDemo.ChainingConsumer();
+
+
+        //--FunctionInterfaces
+        LambdasDemo.FunctionInterFaces();
 
     }
 

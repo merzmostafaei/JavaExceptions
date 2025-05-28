@@ -2,6 +2,7 @@ package com.merzmostafaei.lambdas;
 
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class LambdasDemo {
@@ -36,19 +37,16 @@ public class LambdasDemo {
         //Class(Object::method)
         greet(System.out::println);
 
-        //-- Using Consumer interface
-        System.out.println("Using Consumer interface");
-        List<Integer> list = List.of(1,2,3);
-        //foreach use consumer so we pass the lambrda
-        list.forEach(item -> System.out.println(item));
 
-        //-- Using Supplayer Interface
-        System.out.println("Using Supplayer Interface");
-        Supplier<Double> getRandom = () -> Math.random();
-        var random = getRandom.get();
-        System.out.println(random);
 
     }
+
+
+    public static void greet(Printer printer){
+        printer.print("Hello World from greet method");
+    }
+
+
     public static void ChainingConsumer(){
         List<String> list = List.of("a","b","c");
         Consumer<String> print = item -> System.out.println(item);
@@ -59,9 +57,47 @@ public class LambdasDemo {
     }
 
 
+    public static void FunctionInterFaces() {
+        //-- Using Consumer interface
+        System.out.println("Using Consumer interface");
+        List<Integer> list = List.of(1, 2, 3);
+        //foreach use consumer so we pass the lambrda
+        list.forEach(item -> System.out.println(item));
 
+        //-- Using Supplayer Interface
+        System.out.println("Using Supplayer Interface");
+        Supplier<Double> getRandom = () -> Math.random();
+        var random = getRandom.get();
+        System.out.println(random);
 
-    public static void greet(Printer printer){
-        printer.print("Hello World from greet method");
+        //--Using Function Interface
+        System.out.println("Using Function Interface");
+
+        Function<String, Integer> map = str -> str.length();
+        var lenght = map.apply("Sky");
+        System.out.println(lenght);
+
+        //--Compose Function
+        // think we have this string and we want transform it
+        // "key:Value"
+        // "key=Value"
+        // "{key=Value}"
+        Function<String, String> replaceColon = str -> str.replace(":", "=");
+        Function<String, String> addBraces = str -> "{" + str +"}";
+
+        //Declarative Programming
+        System.out.println("use andThen in Function");
+        var result = replaceColon
+                .andThen(addBraces)
+                .apply("key:value");
+
+        System.out.println(result);
+
+        System.out.println("use compose in Function");
+
+        var result2 = addBraces.compose(replaceColon).apply("key:value");
+
+        System.out.println(result2);
+
     }
 }
