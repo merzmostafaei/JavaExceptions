@@ -136,6 +136,9 @@ public class Main {
         //--Lambdas
         LambdasDemo.show();
 
+        //Chaning consumer
+        LambdasDemo.ChainingConsumer();
+
     }
 
 
