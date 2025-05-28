@@ -3,6 +3,7 @@ package com.merzmostafaei.lambdas;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 public class LambdasDemo {
@@ -99,5 +100,14 @@ public class LambdasDemo {
 
         System.out.println(result2);
 
+        //--Predicate Interface
+        System.out.println("Predicate Interface");
+
+        Predicate<String> isLongerThan5 = str -> str.length()>5;
+        var resiltPredicate = isLongerThan5.test("sky");
+        System.out.println(resiltPredicate);
+
+
     }
+
 }
