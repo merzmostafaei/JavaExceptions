@@ -3,6 +3,8 @@ package com.merzmostafaei.streams;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class StreamDemo {
     public static void show(){
@@ -110,6 +112,61 @@ public class StreamDemo {
 
 
         System.out.println(sum.orElse(0));
+
+        //--Collectors - collect Stream -> Collection like as List
+        System.out.println("Collectors");
+
+        System.out.println("collectorlist ");
+
+        var collectorlist = movies.stream()
+                .filter(movie -> movie.getLike()>10)
+                .collect(Collectors.toList());
+        System.out.println(collectorlist);
+
+        System.out.println("collectorSet");
+
+        var collectorset = movies.stream()
+                .filter(movie -> movie.getLike()>10)
+                .collect(Collectors.toSet());
+        System.out.println(collectorset);
+
+        System.out.println("collectorHashSaveTitleAndmemoryIdentity");
+
+        var collectorHash = movies.stream()
+                .filter(movie -> movie.getLike()>10)
+                .collect(Collectors.toMap(Movie::getTitle, Function.identity()));
+        System.out.println(collectorHash);
+
+        System.out.println("collectorSumInt");
+
+        var collectorSumInt = movies.stream()
+                .filter(movie -> movie.getLike()>10)
+                .collect(Collectors.summingInt(Movie::getLike));
+        System.out.println(collectorSumInt);
+
+        System.out.println("collectorSummarizing");
+
+        var collectorSummarizing = movies.stream()
+                .filter(movie -> movie.getLike()>10)
+                .collect(Collectors.summarizingDouble(Movie::getLike));
+        System.out.println(collectorSummarizing);
+
+        System.out.println("collectorDelimiter");
+
+        var collectorDelimiter = movies.stream()
+                .filter(movie -> movie.getLike()>10)
+                .map(Movie::getTitle)
+                .collect(Collectors.joining(","));
+
+        System.out.println(collectorDelimiter);
+
+
+
+
+
+
+
+
 
 
 
