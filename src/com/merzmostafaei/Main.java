@@ -4,6 +4,7 @@ import com.merzmostafaei.collections.*;
 import com.merzmostafaei.exceptions.ExeptionDemo;
 import com.merzmostafaei.generics.*;
 import com.merzmostafaei.lambdas.LambdasDemo;
+import com.merzmostafaei.streams.CreatingStreamsDemo;
 import com.merzmostafaei.streams.StreamDemo;
 
 
@@ -155,6 +156,9 @@ public class Main {
 
         //--Stream
         StreamDemo.show();
+
+        //CreatingStream
+        CreatingStreamsDemo.show();
 
     }
 
