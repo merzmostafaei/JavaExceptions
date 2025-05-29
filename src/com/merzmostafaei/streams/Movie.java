@@ -13,4 +13,8 @@ public class Movie {
     public int getLike() {
         return like;
     }
+
+    public String getTitle() {
+        return title;
+    }
 }

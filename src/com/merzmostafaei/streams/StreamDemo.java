@@ -7,8 +7,8 @@ public class StreamDemo {
         System.out.println("Stream");
         List<Movie> movies = List.of(
                 new Movie("a", 10),
-                new Movie("b", 20),
-                new Movie("c", 30)
+                new Movie("b", 30),
+                new Movie("c", 20)
         );
 
     //Imprative Programming
@@ -27,7 +27,30 @@ public class StreamDemo {
                 .filter(movie -> movie.getLike()>10)
                 .count();
         System.out.println(count2);
+
+
+        //--SlicingStream
+        System.out.println("SlicingStream");
+        System.out.println("SlicingStreamSkip");
+        movies
+                .stream()
+                .skip(2)
+                .forEach(movie -> System.out.println(movie.getTitle()));
+
+        System.out.println("SlicingStreamTakeWhile");
+        movies
+                .stream()
+                .takeWhile(movie -> movie.getLike()<30)
+                .forEach(movie -> System.out.println(movie.getTitle()));
+
+        System.out.println("SlicingStreamDropWhile");
+        movies
+                .stream()
+                .dropWhile(movie -> movie.getLike()<30)
+                .forEach(movie -> System.out.println(movie.getTitle()));
     }
+
+
 
 
 }
