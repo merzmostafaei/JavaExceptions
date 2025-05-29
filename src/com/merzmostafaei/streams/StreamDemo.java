@@ -2,6 +2,7 @@ package com.merzmostafaei.streams;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 public class StreamDemo {
     public static void show(){
@@ -99,6 +100,16 @@ public class StreamDemo {
 
         System.out.println(min);
 
+
+        //--Reducing Stream
+        System.out.println("Reducing Stream");
+
+        Optional<Integer> sum = movies.stream()
+                .map(m -> m.getLike()).reduce(Integer::sum);
+                //.reduce((a,b)-> a+b);
+
+
+        System.out.println(sum.orElse(0));
 
 
 
