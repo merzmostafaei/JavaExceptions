@@ -8,6 +8,7 @@ public class StreamDemo {
         System.out.println("Stream");
         List<Movie> movies = List.of(
                 new Movie("a", 10),
+                new Movie("a", 10),
                 new Movie("b", 30),
                 new Movie("c", 20)
         );
@@ -57,6 +58,16 @@ public class StreamDemo {
                 //.sorted((a,b)-> a.getTitle().compareTo(b.getTitle()))
                 .sorted(Comparator.comparing(Movie::getTitle).reversed())
                 .forEach(m-> System.out.println(m.getTitle()));
+
+        //--Getting unique Element
+        System.out.println("Getting unique Element");
+
+        movies.stream()
+                .map(Movie::getLike)
+                .distinct()
+                .forEach(System.out::println);
+
+
 
 
     }
