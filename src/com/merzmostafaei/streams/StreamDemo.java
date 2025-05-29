@@ -67,6 +67,40 @@ public class StreamDemo {
                 .distinct()
                 .forEach(System.out::println);
 
+        //SimpleReducer
+        System.out.println("simpleReducer");
+
+
+        var anymatch= movies.stream().anyMatch(movie -> movie.getLike()>20);
+
+        System.out.println(anymatch);
+
+        var allmatch = movies.stream().allMatch(movie -> movie.getLike()>20);
+
+        System.out.println(allmatch);
+
+        var nonematch = movies.stream().noneMatch(movie -> movie.getLike()>20);
+
+        System.out.println(nonematch);
+
+        var findfirst = movies.stream().findFirst().get();
+
+        System.out.println(findfirst);
+
+        var findany = movies.stream().findAny().get();
+
+        System.out.println(findany);
+
+        var max = movies.stream().max(Comparator.comparing(Movie::getLike)).get();
+
+        System.out.println(max);
+
+        var min = movies.stream().min(Comparator.comparing(Movie::getLike)).get();
+
+        System.out.println(min);
+
+
+
 
 
 
