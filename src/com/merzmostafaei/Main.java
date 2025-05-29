@@ -4,6 +4,7 @@ import com.merzmostafaei.collections.*;
 import com.merzmostafaei.exceptions.ExeptionDemo;
 import com.merzmostafaei.generics.*;
 import com.merzmostafaei.lambdas.LambdasDemo;
+import com.merzmostafaei.streams.StreamDemo;
 
 
 import java.io.IOException;
@@ -151,6 +152,9 @@ public class Main {
 
         //UnaryOperator
         LambdasDemo.UnaryOperator();
+
+        //--Stream
+        StreamDemo.show();
 
     }
 
