@@ -1,5 +1,6 @@
 package com.merzmostafaei.streams;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class StreamDemo {
@@ -48,6 +49,16 @@ public class StreamDemo {
                 .stream()
                 .dropWhile(movie -> movie.getLike()<30)
                 .forEach(movie -> System.out.println(movie.getTitle()));
+
+        //--Sorte method
+        System.out.println("sorted method");
+
+        movies.stream()
+                //.sorted((a,b)-> a.getTitle().compareTo(b.getTitle()))
+                .sorted(Comparator.comparing(Movie::getTitle).reversed())
+                .forEach(m-> System.out.println(m.getTitle()));
+
+
     }
 
 

@@ -1,6 +1,6 @@
 package com.merzmostafaei.streams;
 
-public class Movie {
+public class Movie implements Comparable{
     private String title;
 
     private int like;
@@ -16,5 +16,10 @@ public class Movie {
 
     public String getTitle() {
         return title;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
