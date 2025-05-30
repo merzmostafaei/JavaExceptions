@@ -186,6 +186,22 @@ public class StreamDemo {
                 );
         System.out.println(groupingToJoing);
 
+        //--Partitioning Elements
+        System.out.println("PartitioningElements");
+        var PartitioningElements = movies.stream()
+                .collect(
+                        Collectors.partitioningBy(
+                                movie -> movie.getLike()>20,
+                                Collectors
+                                        .mapping(
+                                                Movie::getTitle,
+                                                Collectors.joining(",")
+                                        )
+                        )
+                );
+
+        System.out.println(PartitioningElements);
+
 
 
 
