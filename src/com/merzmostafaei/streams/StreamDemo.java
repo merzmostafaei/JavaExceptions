@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class StreamDemo {
     public static void show(){
@@ -201,6 +202,18 @@ public class StreamDemo {
                 );
 
         System.out.println(PartitioningElements);
+
+        //-PrimitiveStreams
+        System.out.println("PrimitiveStreams");
+        System.out.println("Range");
+        IntStream
+                .range(1,5)
+                .forEach(System.out::println);
+
+        System.out.println("RangeClose");
+        IntStream
+                .rangeClosed(1,5)
+                .forEach(System.out::println);
 
 
 
