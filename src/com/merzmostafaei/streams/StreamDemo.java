@@ -10,10 +10,10 @@ public class StreamDemo {
     public static void show(){
         System.out.println("Stream");
         List<Movie> movies = List.of(
-                new Movie("a", 10),
-                new Movie("a", 10),
-                new Movie("b", 30),
-                new Movie("c", 20)
+                new Movie("a", 10,Genre.THRILLER),
+                new Movie("a", 10,Genre.ACTION),
+                new Movie("b", 30,Genre.COMEDY),
+                new Movie("c", 20,Genre.ACTION)
         );
 
     //Imprative Programming
@@ -159,6 +159,38 @@ public class StreamDemo {
                 .collect(Collectors.joining(","));
 
         System.out.println(collectorDelimiter);
+
+        //--Grouping Element - we want Classifier movies bace on genre
+        System.out.println("Grouping Element");
+
+        System.out.println("groupingToSet");
+        var groupingToSet = movies.stream()
+                .collect(Collectors.groupingBy(
+                        Movie::getGenre,Collectors.toSet()));
+        System.out.println(groupingToSet);
+
+        System.out.println("groupingToCounting");
+        var groupingToCounting = movies.stream()
+                .collect(Collectors.groupingBy(
+                        Movie::getGenre,Collectors.counting()));
+        System.out.println(groupingToCounting);
+
+        System.out.println("groupingToJoing");
+        var groupingToJoing = movies.stream()
+                .collect(Collectors.groupingBy(
+                        Movie::getGenre,Collectors
+                                .mapping(
+                                        Movie::getTitle,
+                                        Collectors.joining(","))
+                        )
+                );
+        System.out.println(groupingToJoing);
+
+
+
+
+
+
 
 
 

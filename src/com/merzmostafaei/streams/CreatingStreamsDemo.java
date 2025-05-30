@@ -11,7 +11,7 @@ public class CreatingStreamsDemo {
     public static void show(){
         //From Colletion
         System.out.println("From Colletion");
-        Collection<Movie> x = List.of(new Movie("E",40),new Movie("F",50)
+        Collection<Movie> x = List.of(new Movie("E",40,Genre.COMEDY),new Movie("F",50,Genre.ACTION)
         );
         var counterlike = x.stream().filter(n-> n.getLike()>30).count();
         System.out.println(counterlike);
