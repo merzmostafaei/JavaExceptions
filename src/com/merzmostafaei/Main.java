@@ -1,6 +1,7 @@
 package com.merzmostafaei;
 
 import com.merzmostafaei.collections.*;
+import com.merzmostafaei.concurrency.DownloadFileTask;
 import com.merzmostafaei.exceptions.ExeptionDemo;
 import com.merzmostafaei.generics.*;
 import com.merzmostafaei.lambdas.LambdasDemo;
@@ -165,6 +166,13 @@ public class Main {
         System.out.println("ThreadRun :"+Thread.activeCount());
         System.out.println("Thread avalible"+Runtime.getRuntime().availableProcessors());
 
+        //--Starting Thread
+        System.out.println("current Thread in main :" + Thread.currentThread().getName());
+
+        for (var i = 0; i<10; i++){
+        Thread thread = new Thread(new DownloadFileTask());
+        thread.start();
+        }
     }
 
 
