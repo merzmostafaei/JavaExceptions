@@ -5,6 +5,11 @@ public class DownloadFileTask implements Runnable {
     public void run(){
 
         System.out.println("Downling File-" + "CurrentThreadNameDownloading:" + Thread.currentThread().getName());
+        for (var i = 0; i< Integer.MAX_VALUE; i++){
+            // if we don't add this line is not gonna execute
+            if(Thread.currentThread().isInterrupted()) return;
+            System.out.println("DownloadingByte"+i);
+        }
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
