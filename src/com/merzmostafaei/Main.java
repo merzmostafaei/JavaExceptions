@@ -163,7 +163,7 @@ public class Main {
         //--Concurrency and Multi-threading
 
         System.out.println("ThreadRun :"+Thread.activeCount());
-        System.out.println("Thread avalible"Runtime.getRuntime().availableProcessors());
+        System.out.println("Thread avalible"+Runtime.getRuntime().availableProcessors());
 
     }
 
