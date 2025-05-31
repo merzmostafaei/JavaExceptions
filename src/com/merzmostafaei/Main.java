@@ -160,6 +160,11 @@ public class Main {
         //CreatingStream
         CreatingStreamsDemo.show();
 
+        //--Concurrency and Multi-threading
+
+        System.out.println("ThreadRun :"+Thread.activeCount());
+        System.out.println("Thread avalible"Runtime.getRuntime().availableProcessors());
+
     }
 
 
