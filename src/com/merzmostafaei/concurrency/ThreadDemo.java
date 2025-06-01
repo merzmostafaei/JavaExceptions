@@ -1,12 +1,15 @@
 package com.merzmostafaei.concurrency;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ThreadDemo {
     public static void show(){
         System.out.println("current Thread in main :" + Thread.currentThread().getName());
 
         //for (var i = 0; i<3; i++){
-            Thread thread = new Thread(new DownloadFileTask());
-            thread.start();
+//            Thread thread = new Thread(new DownloadFileTask(null));
+//            thread.start();
 
             // we want to analyse the file after downlading
             // but we don't know current thread when is
@@ -22,13 +25,16 @@ public class ThreadDemo {
 //            }
 //            System.out.println("File is ready to be scanned");
 //
-            try {
-                thread.sleep(2000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-            // Interrupting a Thread
-            thread.interrupt();
+//            try {
+//                thread.sleep(2000);
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+//            // Interrupting a Thread
+//            thread.interrupt();
+
         //}
+
+
     }
 }

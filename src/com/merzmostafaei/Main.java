@@ -3,6 +3,7 @@ package com.merzmostafaei;
 import com.merzmostafaei.collections.*;
 import com.merzmostafaei.concurrency.DownloadFileTask;
 import com.merzmostafaei.concurrency.ThreadDemo;
+import com.merzmostafaei.concurrency.ThreadRaceConditionDemo;
 import com.merzmostafaei.exceptions.ExeptionDemo;
 import com.merzmostafaei.generics.*;
 import com.merzmostafaei.lambdas.LambdasDemo;
@@ -169,6 +170,9 @@ public class Main {
 
         //--Starting Thread
         ThreadDemo.show();
+
+        //--RaceCondition
+        ThreadRaceConditionDemo.show();
     }
 
 
