@@ -7,15 +7,18 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class DownloadStatus {
     private int totalBytes;
+
+    private volatile boolean isDone;
+
     //private Object totalByteLock = new Object(); --> use insesd of using (this) for monitor filed
 
     //Synchoronized Lock
 
     //private Lock lock = new ReentrantLock();
-
     public int getTotalBytes() {
         return totalBytes;
     }
+
     // use synchronized keyword like this {
 //    public synchronized void incrementTotalBytes(){
 //        //try{
@@ -37,5 +40,12 @@ public class DownloadStatus {
         //}
         //finally {
         //    lock.unlock();}
+    }
+    public boolean isDone() {
+        return isDone;
+    }
+
+    public void setDone() {
+        isDone = true;
     }
 }

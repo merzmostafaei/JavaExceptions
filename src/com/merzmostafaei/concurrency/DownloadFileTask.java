@@ -5,10 +5,16 @@ public class DownloadFileTask implements Runnable {
 
     private final DownloadStatus status;
 
-    public DownloadFileTask() {
-        this.status = new DownloadStatus();
+//-- use For ConfinementDemo
+    //    public DownloadFileTask() {
+//        this.status = new DownloadStatus();
+//
+//    }
+    public DownloadFileTask(DownloadStatus status) {
+       this.status = status;
+     }
 
-    }
+
 
     @Override
     public void run(){
@@ -25,6 +31,8 @@ public class DownloadFileTask implements Runnable {
 //        } catch (InterruptedException e) {
 //            throw new RuntimeException(e);
 //        }
+
+        status.setDone(); // use for volatile
         System.out.println("Downling Complite-" + "CurrentThreadNameDownloading:" + Thread.currentThread().getName());
 
     }
