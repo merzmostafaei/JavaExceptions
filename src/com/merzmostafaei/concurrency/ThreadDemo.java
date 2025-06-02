@@ -8,7 +8,7 @@ public class ThreadDemo {
         System.out.println("current Thread in main :" + Thread.currentThread().getName());
 
         //for (var i = 0; i<3; i++){
-//            Thread thread = new Thread(new DownloadFileTask(null));
+//            Thread thread = new Thread(new DownloadFileTask());
 //            thread.start();
 
             // we want to analyse the file after downlading

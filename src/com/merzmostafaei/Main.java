@@ -1,9 +1,10 @@
 package com.merzmostafaei;
 
 import com.merzmostafaei.collections.*;
+import com.merzmostafaei.concurrency.ConfinementDemo;
 import com.merzmostafaei.concurrency.DownloadFileTask;
 import com.merzmostafaei.concurrency.ThreadDemo;
-import com.merzmostafaei.concurrency.ThreadRaceConditionDemo;
+//import com.merzmostafaei.concurrency.ThreadRaceConditionDemo;
 import com.merzmostafaei.exceptions.ExeptionDemo;
 import com.merzmostafaei.generics.*;
 import com.merzmostafaei.lambdas.LambdasDemo;
@@ -172,7 +173,10 @@ public class Main {
         ThreadDemo.show();
 
         //--RaceCondition
-        ThreadRaceConditionDemo.show();
+        //ThreadRaceConditionDemo.show();
+
+        //-- ConfienmentDemo
+        ConfinementDemo.show();
     }
 
 

@@ -5,8 +5,8 @@ public class DownloadFileTask implements Runnable {
 
     private final DownloadStatus status;
 
-    public DownloadFileTask(DownloadStatus status) {
-        this.status = status;
+    public DownloadFileTask() {
+        this.status = new DownloadStatus();
 
     }
 
@@ -27,5 +27,9 @@ public class DownloadFileTask implements Runnable {
 //        }
         System.out.println("Downling Complite-" + "CurrentThreadNameDownloading:" + Thread.currentThread().getName());
 
+    }
+
+    public DownloadStatus getStatus() {
+        return status;
     }
 }
