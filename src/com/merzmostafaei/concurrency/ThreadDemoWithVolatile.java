@@ -9,10 +9,12 @@ public class ThreadDemoWithVolatile {
         var thread1 = new Thread(new DownloadFileTask(status));
         var thread2 = new Thread(() -> {
            while (!status.isDone()){
-               try {
-                   Thread.sleep(10);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
+               synchronized (status){
+                   try {
+                       status.wait();
+                   } catch (InterruptedException e) {
+                       e.printStackTrace();
+                   }
                }
 
            }

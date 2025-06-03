@@ -33,6 +33,11 @@ public class DownloadFileTask implements Runnable {
 //        }
 
         status.setDone(); // use for volatile
+        synchronized (status){
+            status.notifyAll(); //when use wait for status object
+
+        }
+
         System.out.println("Downling Complite-" + "CurrentThreadNameDownloading:" + Thread.currentThread().getName());
 
     }

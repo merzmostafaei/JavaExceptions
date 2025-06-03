@@ -1,13 +1,18 @@
 package com.merzmostafaei.concurrency;
 
 
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.LongAdder;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 
 public class DownloadStatus {
-    private int totalBytes;
-
+    //private int totalBytes;
+// FOR use Atomic Object
+   // private AtomicInteger totalBytes = new AtomicInteger();
+// For Adder
+    private LongAdder totalBytes = new LongAdder();
     private volatile boolean isDone;
 
     //private Object totalByteLock = new Object(); --> use insesd of using (this) for monitor filed
@@ -16,7 +21,9 @@ public class DownloadStatus {
 
     //private Lock lock = new ReentrantLock();
     public int getTotalBytes() {
-        return totalBytes;
+        //return totalBytes;
+        //return totalBytes.get(); //AtomicObject
+        return totalBytes.intValue(); // Adder
     }
 
     // use synchronized keyword like this {
@@ -24,6 +31,7 @@ public class DownloadStatus {
 //        //try{
 //
 //        totalBytes++;
+
 //
     // }
     //-- OR --
@@ -36,7 +44,9 @@ public class DownloadStatus {
         //lock.lock();
         //try{
 
-            totalBytes++;
+           // totalBytes++;
+            //totalBytes.incrementAndGet(); //AtomicIncrement
+            totalBytes.increment(); //adder
         //}
         //finally {
         //    lock.unlock();}

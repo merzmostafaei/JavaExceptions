@@ -5,6 +5,7 @@ import com.merzmostafaei.collections.*;
 import com.merzmostafaei.concurrency.DownloadFileTask;
 import com.merzmostafaei.concurrency.ThreadDemo;
 //import com.merzmostafaei.concurrency.ThreadRaceConditionDemo;
+import com.merzmostafaei.concurrency.ThreadDemoSynchronizedCollection;
 import com.merzmostafaei.concurrency.ThreadDemoWithVolatile;
 import com.merzmostafaei.exceptions.ExeptionDemo;
 import com.merzmostafaei.generics.*;
@@ -181,6 +182,13 @@ public class Main {
 
         //--Volatile keyvord
         ThreadDemoWithVolatile.show();
+
+        //Atomic Object
+        //Changing the DownloadStatus Field
+        ThreadDemo.show();
+
+        //synchronized Collection
+        ThreadDemoSynchronizedCollection.show();
     }
 
 
