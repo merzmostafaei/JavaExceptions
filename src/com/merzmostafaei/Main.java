@@ -2,19 +2,15 @@ package com.merzmostafaei;
 
 import com.merzmostafaei.collections.*;
 //import com.merzmostafaei.concurrency.ConfinementDemo;
-import com.merzmostafaei.concurrency.DownloadFileTask;
-import com.merzmostafaei.concurrency.ThreadDemo;
+import com.merzmostafaei.concurrency.*;
 //import com.merzmostafaei.concurrency.ThreadRaceConditionDemo;
-import com.merzmostafaei.concurrency.ThreadDemoSynchronizedCollection;
-import com.merzmostafaei.concurrency.ThreadDemoWithVolatile;
-import com.merzmostafaei.exceptions.ExeptionDemo;
+import com.merzmostafaei.executors.ExecutorsDemo;
 import com.merzmostafaei.generics.*;
 import com.merzmostafaei.lambdas.LambdasDemo;
 import com.merzmostafaei.streams.CreatingStreamsDemo;
 import com.merzmostafaei.streams.StreamDemo;
 
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -189,6 +185,9 @@ public class Main {
 
         //synchronized Collection
         ThreadDemoSynchronizedCollection.show();
+
+        //Executor
+        ExecutorsDemo.show();
     }
 
 
