@@ -7,7 +7,7 @@ public class TransformingACompletableFuture {
         var future =CompletableFuture.supplyAsync(()-> 20);
         future
                 .thenApply(TransformingACompletableFuture::toFahrenheit)
-                .thenAccept(f-> System.out.println("TransformingResult"+f));
+                .thenAccept(f-> System.out.println("TransformingResult "+f));
 
     }
 
