@@ -220,6 +220,9 @@ public class Main {
         //--ComposingCompletableFuture
 
         ComposingCompletableFutures.show();
+
+        //--CombiningCompletableFuture
+        CombiningCompletableFuture.show();
     }
 
 
