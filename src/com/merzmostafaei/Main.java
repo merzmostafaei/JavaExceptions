@@ -193,7 +193,7 @@ public class Main {
         //ExecutorsDemo.show();
 
         //--Callable And Futures
-        ExecutorsDemo.show();
+        //ExecutorsDemo.show();
 
         //--CompletableFuture
         CompletableFuturesDemo.show();
@@ -207,6 +207,10 @@ public class Main {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+
+        //-- Running Code on Completion
+
+        ExecutorsDemo.Comletion();
     }
 
 
