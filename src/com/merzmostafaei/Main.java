@@ -6,6 +6,7 @@ import com.merzmostafaei.concurrency.*;
 //import com.merzmostafaei.concurrency.ThreadRaceConditionDemo;
 import com.merzmostafaei.executors.CompletableFuturesDemo;
 import com.merzmostafaei.executors.ExecutorsDemo;
+import com.merzmostafaei.executors.MailService;
 import com.merzmostafaei.generics.*;
 import com.merzmostafaei.lambdas.LambdasDemo;
 import com.merzmostafaei.streams.CreatingStreamsDemo;
@@ -196,6 +197,16 @@ public class Main {
 
         //--CompletableFuture
         CompletableFuturesDemo.show();
+
+        // --Implementing and Asynchronous API
+        var service = new MailService();
+        service.sendAsync();
+        System.out.println("Hello World ");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
