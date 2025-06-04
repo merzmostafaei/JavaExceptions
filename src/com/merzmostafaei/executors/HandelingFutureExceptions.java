@@ -1,5 +1,6 @@
 package com.merzmostafaei.executors;
 
+import java.awt.*;
 import java.awt.geom.IllegalPathStateException;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
@@ -10,9 +11,11 @@ public class HandelingFutureExceptions {
            System.out.println("Getting the Current Weather");
            throw new IllegalPathStateException();});
        try {
-           future.exceptionally(ex-> 22).get();
+           var temprature = future.exceptionally(ex-> 22).get();
+           System.out.println(temprature);
        } catch (InterruptedException |ExecutionException e) {
            throw new RuntimeException(e);
        }
+
    }
 }
