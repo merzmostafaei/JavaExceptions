@@ -10,7 +10,7 @@ public class HandelingFutureExceptions {
            System.out.println("Getting the Current Weather");
            throw new IllegalPathStateException();});
        try {
-           future.exceptionally(ex-> -22).get();
+           future.exceptionally(ex-> 22).get();
        } catch (InterruptedException |ExecutionException e) {
            throw new RuntimeException(e);
        }

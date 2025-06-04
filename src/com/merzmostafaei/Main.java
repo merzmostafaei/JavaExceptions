@@ -6,6 +6,7 @@ import com.merzmostafaei.concurrency.*;
 //import com.merzmostafaei.concurrency.ThreadRaceConditionDemo;
 import com.merzmostafaei.executors.CompletableFuturesDemo;
 import com.merzmostafaei.executors.ExecutorsDemo;
+import com.merzmostafaei.executors.HandelingFutureExceptions;
 import com.merzmostafaei.executors.MailService;
 import com.merzmostafaei.generics.*;
 import com.merzmostafaei.lambdas.LambdasDemo;
@@ -211,6 +212,9 @@ public class Main {
         //-- Running Code on Completion
 
         ExecutorsDemo.Comletion();
+
+        //--Handling Exceptions
+        HandelingFutureExceptions.show();
     }
 
 
