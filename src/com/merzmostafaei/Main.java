@@ -213,9 +213,13 @@ public class Main {
         //--Handling Exceptions
         HandelingFutureExceptions.show();
 
-        //Transforming a Completable Future
+        //--Transforming a Completable Future
 
         TransformingACompletableFuture.show();
+
+        //--ComposingCompletableFuture
+
+        ComposingCompletableFutures.show();
     }
 
 
