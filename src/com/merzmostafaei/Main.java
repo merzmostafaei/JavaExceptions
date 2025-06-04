@@ -226,6 +226,10 @@ public class Main {
 
         //--Waiting for Many Tasks to Complete
         CombiningCompletableFuture.manyTask();
+
+        //Waiting For the First Task
+        //Use For Slow Service
+        CombiningCompletableFuture.Taskdelay();
     }
 
 

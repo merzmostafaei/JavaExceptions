@@ -22,6 +22,7 @@ public class CombiningCompletableFuture {
                 .thenAccept(result-> System.out.println("CombiningCompletableFuture"+result));
     }
 
+    //--Wait for many task
     public static void manyTask(){
         var first = CompletableFuture.supplyAsync(()->10);
         var second = CompletableFuture.supplyAsync(()->11);
@@ -42,5 +43,21 @@ public class CombiningCompletableFuture {
             System.out.println("All Tasks Complete Successfully");
 
         });
+
+    }
+    //Waiting For the First Task
+    //Use For Slow Service
+    public static void Taskdelay(){
+        var first = CompletableFuture.supplyAsync(()->{LongTask.simulate();
+        return 20; });
+
+        var second = CompletableFuture.supplyAsync(()->20);
+
+        CompletableFuture
+                .anyOf(first,second)
+                .thenAccept(temp-> System.out.println("Get The Result Of 2 Service if One of them has Delay : "+temp));
+
+
+
     }
 }
