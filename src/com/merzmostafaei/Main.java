@@ -223,6 +223,9 @@ public class Main {
 
         //--CombiningCompletableFuture
         CombiningCompletableFuture.show();
+
+        //--Waiting for Many Tasks to Complete
+        CombiningCompletableFuture.manyTask();
     }
 
 
