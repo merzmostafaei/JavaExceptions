@@ -4,6 +4,7 @@ import com.merzmostafaei.collections.*;
 //import com.merzmostafaei.concurrency.ConfinementDemo;
 import com.merzmostafaei.concurrency.*;
 //import com.merzmostafaei.concurrency.ThreadRaceConditionDemo;
+import com.merzmostafaei.executors.CompletableFuturesDemo;
 import com.merzmostafaei.executors.ExecutorsDemo;
 import com.merzmostafaei.generics.*;
 import com.merzmostafaei.lambdas.LambdasDemo;
@@ -14,6 +15,7 @@ import com.merzmostafaei.streams.StreamDemo;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -191,6 +193,9 @@ public class Main {
 
         //--Callable And Futures
         ExecutorsDemo.show();
+
+        //--CompletableFuture
+        CompletableFuturesDemo.show();
     }
 
 
