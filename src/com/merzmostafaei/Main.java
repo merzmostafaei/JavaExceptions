@@ -4,10 +4,7 @@ import com.merzmostafaei.collections.*;
 //import com.merzmostafaei.concurrency.ConfinementDemo;
 import com.merzmostafaei.concurrency.*;
 //import com.merzmostafaei.concurrency.ThreadRaceConditionDemo;
-import com.merzmostafaei.executors.CompletableFuturesDemo;
-import com.merzmostafaei.executors.ExecutorsDemo;
-import com.merzmostafaei.executors.HandelingFutureExceptions;
-import com.merzmostafaei.executors.MailService;
+import com.merzmostafaei.executors.*;
 import com.merzmostafaei.generics.*;
 import com.merzmostafaei.lambdas.LambdasDemo;
 import com.merzmostafaei.streams.CreatingStreamsDemo;
@@ -215,6 +212,10 @@ public class Main {
 
         //--Handling Exceptions
         HandelingFutureExceptions.show();
+
+        //Transforming a Completable Future
+
+        TransformingACompletableFuture.show();
     }
 
 
