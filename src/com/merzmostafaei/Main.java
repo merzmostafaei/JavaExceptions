@@ -233,6 +233,9 @@ public class Main {
 
         //--HandelingTimeOuts
         HandelingTimeOuts.show();
+
+        //--BestPriceFinder Practice
+        com.merzmostafaei.PriceFinderPractice.CompletableFuturesDemo.show();
     }
 
 
